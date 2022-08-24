@@ -1,0 +1,10 @@
+BasedOnStyle: Chromium
+AlignConsecutiveMacros: 'true'
+AlignConsecutiveAssignments: 'true'
+AlignConsecutiveDeclarations: 'true'
+AlignOperands: 'true'
+AllowAllArgumentsOnNextLine: 'true'
+ColumnLimit: '110'
+Language: Cpp
+TabWidth: '2'
+UseTab: Never

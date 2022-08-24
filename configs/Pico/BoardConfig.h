@@ -38,7 +38,18 @@
 #define PIN_BUTTON_TURBO 14         // Turbo
 #define PIN_SLIDER_LS    -1         // Left Stick Slider
 #define PIN_SLIDER_RS    -1         // Right Stick Slider
-
+#define PIN_LEFT_SLIDER_S0    0
+#define PIN_LEFT_SLIDER_S1    0
+#define PIN_LEFT_SLIDER_S2    0
+#define PIN_LEFT_SLIDER_S3    0
+#define PIN_LEFT_SLIDER_COM0  0
+#define PIN_LEFT_SLIDER_COM1  0
+#define PIN_RIGHT_SLIDER_S0   0
+#define PIN_RIGHT_SLIDER_S1   0
+#define PIN_RIGHT_SLIDER_S2   0
+#define PIN_RIGHT_SLIDER_S3   0
+#define PIN_RIGHT_SLIDER_COM0 0
+#define PIN_RIGHT_SLIDER_COM1 0
 
 // This is the SOCD section.
 // SOCD stands for `simultaneous opposing cardinal directions`.
@@ -163,7 +174,7 @@
 // 4 - `NOSPLASH` - This will not display a splash screen on boot
 // Special note - All of the splash screen images can be changed via `include/bitmaps.h`
 
-#define HAS_I2C_DISPLAY 1
+#define HAS_I2C_DISPLAY 0
 #define I2C_SDA_PIN 0
 #define I2C_SCL_PIN 1
 #define I2C_BLOCK i2c0

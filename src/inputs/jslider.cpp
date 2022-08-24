@@ -16,23 +16,10 @@ bool JSliderInput::available() {
 void JSliderInput::setup()
 {
     BoardOptions boardOptions = Storage::getInstance().getBoardOptions();
-    gpio_init(boardOptions.pinSliderLS);             // Initialize pin
-    gpio_set_dir(boardOptions.pinSliderLS, GPIO_IN); // Set as INPUT
-    gpio_pull_up(boardOptions.pinSliderLS);          // Set as PULLUP
-    gpio_init(boardOptions.pinSliderRS);
-    gpio_set_dir(boardOptions.pinSliderRS, GPIO_IN); // Set as INPUT
-    gpio_pull_up(boardOptions.pinSliderRS);          // Set as PULLUP
 }
 
 DpadMode JSliderInput::read() {
     BoardOptions boardOptions = Storage::getInstance().getBoardOptions();
-    if ( boardOptions.pinSliderLS != (uint8_t)-1 && boardOptions.pinSliderRS != (uint8_t)-1) {
-        if ( !gpio_get(boardOptions.pinSliderLS)) {
-            return DPAD_MODE_LEFT_ANALOG;
-        } else if ( !gpio_get(boardOptions.pinSliderRS)) {
-            return DPAD_MODE_RIGHT_ANALOG;
-        }  
-    }
     return  DPAD_MODE_DIGITAL;
 }
 
