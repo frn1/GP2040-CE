@@ -8,10 +8,9 @@ bool DivaSliderInput::available() {}
 
 void DivaSliderInput::setup() {}
 
-DpadMode DivaSliderInput::read() {
+uint16_t DivaSliderInput::read() {
 
 }
 
 void DivaSliderInput::process() {
-  Gamepad* gamepad = Storage::getInstance().GetGamepad();
 }
