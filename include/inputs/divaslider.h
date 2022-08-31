@@ -5,6 +5,8 @@
 
 #include "GamepadEnums.h"
 
+#include <CapacitiveSensor.h>
+
 #ifndef PIN_LEFT_SLIDER_S0
 #define PIN_LEFT_SLIDER_S0 0
 #endif
@@ -53,7 +55,10 @@ class DivaSliderInput : public GPAddon {
   virtual std::string name() { return DivaSliderName; }
 
  private:
-  DpadMode read();
+  uint16_t read_left();
+  uint16_t read_right();
+  CapacitiveSensor capSensorLeft = CapacitiveSensor(PIN_LEFT_SLIDER_COM0, PIN_LEFT_SLIDER_COM1);
+  CapacitiveSensor capSensorRight = CapacitiveSensor(PIN_RIGHT_SLIDER_COM0, PIN_RIGHT_SLIDER_COM1);
 };
 
 #endif
